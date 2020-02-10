@@ -1,0 +1,29 @@
+language: ruby
+rvm:
+    - 2.6.3
+
+# Assume bundler is being used. The `install` step will run `bundle install`.
+script: ./script/ci/build
+
+env:
+  global:
+  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true # speeds up installation of html-proofer
+
+addons:
+  apt:
+    packages:
+      - libcurl4-openssl-dev
+
+# Route build to the container-based infrastructure for a faster build
+sudo: false
+
+# From jekyllrb.com: Travis bundles all gems in the vendor directory on its
+# build servers, which Jekyll will mistakenly read and explode on.
+exclude: [vendor]
+
+# Cacheing bundler gem packages will speed up build
+cache: bundler
+
+# Email notifications about outcome of build.
+notifications:
+  email: true
