@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+set -e
+
+bundle exec jekyll build
+
+# Verify local links and images.
+bundle exec htmlproofer ./_site --disable-external
+
