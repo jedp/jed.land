@@ -41,7 +41,7 @@ I had something that made sense of the results and extracted the data I needed.
 I wrote a PostScript program that would reproduce as exactly as possible the
 forms they provided. Here's what one of the originals looked like:
 
-![An manually filled-out receipt](/assets/book-receipt-manual.jpg)
+![A manually filled-out receipt](/assets/book-receipt-manual.jpg)
 
 The only important information is the call number and the patron's name. It's
 good to have the title and book author there as well in case there's a typo in
